@@ -123,6 +123,7 @@ module.exports = function(grunt) {
           'doc/lib/marked.min.js': ['node_modules/marked/lib/marked.js'],
           'doc/lib/mathjax.min.js': ['doc/lib/mathjax.js'],
           'doc/lib/qr.min.js': ['doc/lib/qr.js'],
+          'doc/lib/Chart.min.js': ['node_modules/chart.js/Chart.js'],
           'doc/lib/jquery.min.js': ['node_modules/jquery/dist/jquery.js']
         }
       }
