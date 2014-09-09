@@ -1,0 +1,180 @@
+/*  =preview
+--------------------------------*/
+
+x-md pre code {
+  display: block; padding: 0.5em;
+  background: #F0F0F0;
+}
+
+x-md pre code,
+x-md pre .subst,
+x-md pre .tag .title,
+x-md pre .lisp .title,
+x-md pre .clojure .built_in,
+x-md pre .nginx .title {
+  color: black;
+}
+
+x-md pre .string,
+x-md pre .title,
+x-md pre .constant,
+x-md pre .parent,
+x-md pre .tag .value,
+x-md pre .rules .value,
+x-md pre .rules .value .number,
+x-md pre .preprocessor,
+x-md pre .ruby .symbol,
+x-md pre .ruby .symbol .string,
+x-md pre .aggregate,
+x-md pre .template_tag,
+x-md pre .django .variable,
+x-md pre .smalltalk .class,
+x-md pre .addition,
+x-md pre .flow,
+x-md pre .stream,
+x-md pre .bash .variable,
+x-md pre .apache .tag,
+x-md pre .apache .cbracket,
+x-md pre .tex .command,
+x-md pre .tex .special,
+x-md pre .erlang_repl .function_or_atom,
+x-md pre .markdown .header {
+  color: #800;
+}
+
+x-md pre .comment,
+x-md pre .annotation,
+x-md pre .template_comment,
+x-md pre .diff .header,
+x-md pre .chunk,
+x-md pre .markdown .blockquote {
+  color: #888;
+}
+
+x-md pre .number,
+x-md pre .date,
+x-md pre .regexp,
+x-md pre .literal,
+x-md pre .smalltalk .symbol,
+x-md pre .smalltalk .char,
+x-md pre .go .constant,
+x-md pre .change,
+x-md pre .markdown .bullet,
+x-md pre .markdown .link_url {
+  color: #080;
+}
+
+x-md pre .label,
+x-md pre .javadoc,
+x-md pre .ruby .string,
+x-md pre .decorator,
+x-md pre .filter .argument,
+x-md pre .localvars,
+x-md pre .array,
+x-md pre .attr_selector,
+x-md pre .important,
+x-md pre .pseudo,
+x-md pre .pi,
+x-md pre .doctype,
+x-md pre .deletion,
+x-md pre .envvar,
+x-md pre .shebang,
+x-md pre .apache .sqbracket,
+x-md pre .nginx .built_in,
+x-md pre .tex .formula,
+x-md pre .erlang_repl .reserved,
+x-md pre .prompt,
+x-md pre .markdown .link_label,
+x-md pre .vhdl .attribute,
+x-md pre .clojure .attribute,
+x-md pre .coffeescript .property {
+  color: #88F
+}
+
+x-md pre .keyword,
+x-md pre .id,
+x-md pre .phpdoc,
+x-md pre .title,
+x-md pre .built_in,
+x-md pre .aggregate,
+x-md pre .css .tag,
+x-md pre .javadoctag,
+x-md pre .phpdoc,
+x-md pre .yardoctag,
+x-md pre .smalltalk .class,
+x-md pre .winutils,
+x-md pre .bash .variable,
+x-md pre .apache .tag,
+x-md pre .go .typename,
+x-md pre .tex .command,
+x-md pre .markdown .strong,
+x-md pre .request,
+x-md pre .status {
+  font-weight: bold;
+}
+
+x-md pre .markdown .emphasis,
+x-md pre .comment {
+  font-style: italic;
+}
+
+x-md pre .nginx .built_in {
+  font-weight: normal;
+}
+
+x-md pre .coffeescript .javascript,
+x-md pre .javascript .xml,
+x-md pre .tex .formula,
+x-md pre .xml .javascript,
+x-md pre .xml .vbscript,
+x-md pre .xml .css,
+x-md pre .xml .cdata {
+  opacity: 0.5;
+}
+
+/*  =page
+--------------------------------*/
+x-md a{ color: rgb(0, 136, 204); text-decoration:none;}
+x-md a:visited{ color: #0b0080; }
+x-md a:hover{ color: #06e; }
+x-md a:active{ color:#faa700; }
+x-md a:focus{ outline: thin dotted; }
+x-md a:hover, a:active{ outline: 0; }
+
+x-md p{ margin:1em 0; }
+
+x-md img{ max-width:100%; }
+
+x-md h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em;}
+x-md h4,h5,h6{ font-weight: bold; }
+x-md h1{ font-size:2.5em; }
+x-md h2{ font-size:2.1em; border-bottom:1px solid silver; padding-bottom: 5px; }
+x-md h3{ font-size:1.7em; }
+x-md h4{ font-size:1.5em; }
+x-md h5{ font-size:1.2em; }
+x-md h6{ font-size:1em; }
+
+x-md blockquote{color:#666666;margin:0;padding-left: 3em;border-left: 0.5em #EEE solid;}
+x-md hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+x-md pre, code{
+    color: #000;
+    font-family: monospace;
+    font-size: 1em;
+    border-radius:3px;
+    background-color: #F8F8F8;
+    border: 1px solid #CCC;
+}
+x-md pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
+x-md pre code { border: 0px !important; background: transparent !important; line-height: 1.3em; }
+x-md code { padding: 0 3px 0 3px; }
+x-md sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+x-md sup { top: -0.5em; }
+x-md sub { bottom: -0.25em; }
+x-md ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+x-md li p:last-child { margin:0 }
+x-md dd { margin: 0 0 0 2em; }
+x-md img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+x-md table { border-collapse: collapse; border-spacing: 0; }
+x-md td, th { vertical-align: top; padding: 4px 10px; border: 1px solid #bbb; }
+x-md tr:nth-child(even) td, tr:nth-child(even) th { background: #eee; }
