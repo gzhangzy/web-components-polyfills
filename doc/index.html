@@ -2,8 +2,8 @@
 <html>
 <head>
   <script src="/lib/register-element.min.js"></script>
-  <link rel="stylesheet" href="/x-tags.css?id=x-md">
-  <script src="/x-tags.js?id=x-md,x-math,x-qr,x-chart"></script>
+  <link rel="stylesheet" href="/x-tags.css?id=x-md,x-clock">
+  <script src="/x-tags.js?id=x-md,x-math,x-qr,x-chart,x-clock"></script>
 </head>
 <body>
 <table>
@@ -84,10 +84,11 @@
     })();
   </script>
   <center>
-    <x-qr format="png" data="http://tongyongwangzhi.duapp.com/"></x-qr>
-    <x-chart width="200" height="200" mode="polar-area"
-             values='[30,90,18,58,82]'
-             colors='["#46BFBD","#FDB45C","#949FB1","#4D5360","#F7464A"]'></x-chart><br/>
+    <table><tr><td>
+      <x-qr format="png" data="http://tongyongwangzhi.duapp.com/"></x-qr>
+    </td><td>
+      <x-clock width="130px" height="130px"></x-clock>
+    </td></tr></table>
     <x-chart width="400" height="200" mode="bar"
              labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]'
              values='[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]'
@@ -95,17 +96,20 @@
     <x-chart width="200" height="200" mode="pie"
              values='[30,50,100,40,120]'
              colors='["#F7464A","#46BFBD","#FDB45C","#949FB1","#4D5360"]'></x-chart>
-    <x-chart width="200" height="200" mode="doughnut"
-             values='[30,50,100,40,120]'
-             colors='["#F7464A","#46BFBD","#FDB45C","#949FB1","#4D5360"]'></x-chart><br/>
+    <x-chart width="200" height="200" mode="polar-area"
+             values='[30,90,18,58,82]'
+             colors='["#46BFBD","#FDB45C","#949FB1","#4D5360","#F7464A"]'></x-chart><br/>
     <x-chart width="400" height="200" mode="line"
              labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]'
              values='[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]'
              colors='["253,180,92","247,70,74"]'></x-chart><br/>
-    <x-chart width="400" height="200" mode="radar"
+    <x-chart width="200" height="200" mode="radar"
              labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]'
              values='[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]'
-             colors='["253,180,92","247,70,74"]'></x-chart><br/>
+             colors='["253,180,92","247,70,74"]'></x-chart>
+    <x-chart width="200" height="200" mode="doughnut"
+             values='[30,50,100,40,120]'
+             colors='["#F7464A","#46BFBD","#FDB45C","#949FB1","#4D5360"]'></x-chart><br/>
   </center>
 </td>
 </tr>
