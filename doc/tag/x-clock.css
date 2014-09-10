@@ -1,0 +1,47 @@
+x-clock {
+	display: block;
+	position: relative;
+	border: 6px solid black;
+	border-radius: 50%;
+}
+.x-clock-container::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 12px;
+	height: 12px;
+	margin: -6px 0 0 -6px;
+	background: black;
+	border-radius: 6px;
+	content: "";
+	display: block;
+}
+.x-clock-container > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: black;
+}
+.x-clock-hour {
+	margin: -4px 0 -4px -25%;
+	padding: 4px 0 4px 25%;
+	-ms-transform-origin: 100% 50%;
+	-webkit-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	border-radius: 4px 0 0 4px;
+}
+.x-clock-minute {
+	margin: -40% -3px 0;
+	padding: 40% 3px 0;
+	-ms-transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	border-radius: 3px 3px 0 0;
+}
+.x-clock-second {
+	margin: -40% -1px 0 0;
+	padding: 40% 1px 0;
+	-ms-transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
