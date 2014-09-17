@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/lib/register-element.min.js"></script>
+    <link rel="stylesheet" href="/x-tags.css?id=x-presentation,x-slide,x-md,x-clock">
+    <script src="/x-tags.js?id=x-presentation,x-slide,x-md,x-math,x-qr,x-chart,x-clock"></script>
+    <style>
+x-md > h2 {
+    font-size: 1em;
+}
+x-md > p {
+    font-size: small;
+}
+th, td {
+    padding: 0.1em 0.1em;
+}
+    </style>
+</head>
+<body>
+<x-presentation>
+    <x-slide align='center'>
+<x-md breaks="true" smartypants="true">
+架设用户习惯与标准之间的桥梁
+---------------------
+
+这是一段旧时的记忆，也曾经是很多人的梦想。在这个故事里的很多人，如今都已成为江湖中的大佬，他们的传奇故事被世人传颂，缺失的章节又有多少人能了解？还有更多的人，是怀着郁闷的心情与梦想告别的，他们时不时地怀念着过去，思索着如何能重新拾起旧时的梦。
+
+这个故事里第一个出场的人是周鸿祎，不管3721推出了个“中文网址”，说是为了实现让中国人能用自己的母语上网的理想。第二个出场的人是毛伟，用他自己的话说：当我们敏锐意识到中文上网在广大网民中潜藏着巨大需求时，便顺势推出了“通用网址”服务。接下来的故事就精彩了，简单说：开打。由此诞生了“流氓软件”这一词汇。
+
+接下来就是站队，找兄弟帮忙。都找了那些兄弟呢？毛伟和朱长勇给盖茨写了封信。哪个盖茨？世界首富，微软比尔盖茨。盖茨真够意思，让他的IE浏览器支持通用网址。那可不是一般的支持，那时IE就是浏览器的别名。这一支持一直持续了7年。那周鸿祎也不是一般人呀，就这么打都打不服。不服再找俩兄弟上，看丫服不服？！哪两个兄弟？百度和腾讯。够分量吗？这要展开，话就太长了。就此打住。
+
+都帮着毛伟，就没有帮周鸿祎的吗？有呀，也是狠角色。雅虎！那时的雅虎可是互联网的领军人物，今非昔比。在关键时刻收留了周鸿祎，给了3721一个不错的价格。但毕竟大局已定，无力回天。
+
+现在最牛的数BAT了，前面说了俩，没马云什么事吗？故事要是这样结局就太遗憾了。该马云出场了。简单说就是，马云收购了雅虎（中国），赶走了周鸿祎。然后彻底废了“中文网址”（也就是后来的“网络实名”）。
+
+故事该结束了吧？要是拍电影，我觉得是结束的时候了。生活还要继续，没有了对手的“通用网址”也偏离了原定的发展轨道，走向末路。故事就到这里吧。
+</x-md>
+    </x-slide>
+    <x-slide background='#FFFFFF' align='center'>
+<h1><code>&lt;x-math&gt;</code> demo</h1>
+<p>For <x-math>n \in \mathbb N = 1, 2, 3, \ldots</x-math> we have</p>
+<x-math mode="display">\sum_{k=1}^n k = \frac{n(n+1)}{2}</x-math>
+    </x-slide>
+    <x-slide background='#C0392B' align='center'>
+<table><tr>
+<td>
+    <x-clock width="130px" height="130px"></x-clock>
+</td>
+<td>
+    <x-qr format="png" data="http://tongyongwangzhi.duapp.com/" class="fragment"></x-qr>
+</td>
+<td>
+    <x-chart width="400" height="200" mode="bar" class="fragment"
+             labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]'
+             values='[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]'
+             colors='["253,180,92","247,70,74"]'></x-chart>
+</td></tr>
+<tr><td>
+    <x-chart width="200" height="200" mode="pie" class="fragment"
+             values='[30,50,100,40,120]'
+             colors='["#F7464A","#46BFBD","#FDB45C","#949FB1","#4D5360"]'></x-chart>
+</td>
+<td>
+    <x-chart width="200" height="200" mode="polar-area" class="fragment"
+             values='[30,90,18,58,82]'
+             colors='["#46BFBD","#FDB45C","#949FB1","#4D5360","#F7464A"]'></x-chart>
+</td>
+<td>
+    <x-chart width="400" height="200" mode="line" class="fragment"
+             labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]'
+             values='[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]'
+             colors='["253,180,92","247,70,74"]'></x-chart>
+</td></tr>
+<tr><td>
+    <x-chart width="200" height="200" mode="radar" class="fragment"
+             labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]'
+             values='[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]'
+             colors='["253,180,92","247,70,74"]'></x-chart>
+</td>
+<td>
+    <x-chart width="200" height="200" mode="doughnut" class="fragment"
+             values='[30,50,100,40,120]'
+             colors='["#F7464A","#46BFBD","#FDB45C","#949FB1","#4D5360"]'></x-chart>
+</td>
+<td>
+</td></tr>
+</table>
+    </x-slide>
+</x-presentation>
+<script></script>
+</body>
+</html>
