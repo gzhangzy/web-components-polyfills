@@ -1,7 +1,6 @@
 (function() {
     var proto = Object.create(HTMLElement.prototype);
     proto.createdCallback = function() {
-        var that = this;
         this.style.width = this.getAttribute('width');
         this.style.height = this.getAttribute('height');
         this.innerHTML =
@@ -15,8 +14,8 @@
         this.secondElement = this.querySelector(".x-clock-second");
         this.updateClock();
         setInterval(function() {
-            that.updateClock();
-        }, 1000);
+            this.updateClock();
+        }.bind(this), 1000);
     };
     proto.updateClock = function() {
         var now = new Date(),
@@ -25,7 +24,7 @@
             hour = now.getHours(),
             secondAngle = second * 6,
             minuteAngle = minute * 6 + second / 10,
-            hourAngle = hour % 12 / 12 * 360 + 90 + minute / 12;
+            hourAngle = 90 + hour * 30 + minute / 2;
         this.secondElement.style.msTransform =
         this.secondElement.style.webkitTransform =
         this.secondElement.style.transform = "rotate(" + secondAngle + "deg)";

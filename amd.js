@@ -1,7 +1,7 @@
 /*
     https://curiosity-driven.org/minimal-loader?utm_source=echojs
 */
-(function(document) {
+(function(window, document) {
     var listeners = {}, resolves = {}, config = {}, loaded = {}, anonymous = [];
 
     function resolve(name, value) {
@@ -18,28 +18,27 @@
         }
     }
 
-    function onScriptLoad(evt) {
-        var node = evt.currentTarget || evt.srcElement;
-        if(evt.type==='load' || /^(complete|loaded)$/.test(node.readyState)) {
-            node.removeEventListener('load', onScriptLoad, false);
-            var name = node.getAttribute('data-requiremodule');
-            anonymous.forEach(function(value) {
-                resolve(name, value);
-            });
-            anonymous = [];
-        }
-    }
-
     function addLoadListener(name, listener) {
+        function onScriptLoad(evt) {
+            var node = evt.currentTarget || evt.srcElement;
+            if(evt.type==='load' || /^(complete|loaded)$/.test(node.readyState)) {
+                node.removeEventListener('load', onScriptLoad, false);
+                anonymous.forEach(function(value) {
+                    resolve(name, value);
+                });
+                anonymous = [];
+            }
+        }
+
         if(name in resolves) listener(name, resolves[name]);
         else if(listeners[name]) listeners[name].push(listener);
         else {
             listeners[name] = [listener];
             if(config[name] && !loaded[config[name]]) {
                 var node = document.createElement('SCRIPT');
-                node.setAttribute('data-requiremodule', name);
-                node.addEventListener('load', onScriptLoad, false);
                 node.src = config[name];
+                node.async = true;
+                node.addEventListener('load', onScriptLoad, false);
                 document.head.appendChild(node);
                 loaded[config[name]] = true;
             }
@@ -88,4 +87,4 @@
 
     window.require = require;
     window.define = define;
-}(document));
+}(window, document));

@@ -29,6 +29,7 @@ define(function() {
 
     var node = document.createElement('SCRIPT');
     node.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js';
+    node.async = true;
     document.head.appendChild(node);
 
     return pushAction;
